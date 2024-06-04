@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-*{
+* {
     font-family: 'Inter', 'sans-serif';
+}
+
+/* Custom styles for the navbar */
+.navbar-web {
+    display: none;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    top: 100%;
+    z-index: 99;
+}
+
+.navbar-web.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Other custom styles */
+.transition-all {
+    transition: all .3s ease-in-out;
 }

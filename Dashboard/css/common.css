@@ -331,6 +331,9 @@ code {
     .profile h4 {
         display: none;
     }
+    .sidebar span{
+        padding-left: 20px;
+    }
 
     
     .profile img {

@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
     const sidebar = document.querySelector('.sidebar');
     const dashboard = document.querySelector('.content');
+    sidebar.addEventListener('click', function() {
+        sidebar.classList.toggle('open');
+    });
 
     menuToggle.addEventListener('click', function() {
         sidebar.classList.toggle('open');

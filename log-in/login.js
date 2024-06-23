@@ -102,6 +102,7 @@ document.querySelector('.rectangle-button').addEventListener('click', async (eve
                 const userDocData = userQuerySnapshot.docs[0].data();
                 localStorage.setItem('userEmail', email);
                 localStorage.setItem('userNIK', userDocData.nik); // Save NIK if needed
+                localStorage.setItem('userName', userDocData['name']);
 
                 // Redirect to user page
                 window.location.href = "/landing-page.html";

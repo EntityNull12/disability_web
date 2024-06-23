@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<!--  This source code is exported from pxCode, you can get more document from https://www.pxcode.io  -->
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" type="text/css" href="./css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="./css/tailwind.css" />
+    <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/sticky-js@1.3.0/dist/sticky.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        /* Center the main content */
+        main.content {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        /* Align the profile info to the top right corner */
+        .profile-info {
+            float:right;
+             
+        }
+        .profile-info img {
+            margin-left: px;
+        }
+
+        /* Remove unnecessary margins */
+        section {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body class="flex">
+
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h3>My Dashboard</h3>
+        </div>
+        <div class="profile">
+            <img src="/Dashboard/assets/profile.jpeg" alt="Profile Picture">
+            <h4>John Doe</h4>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#">
+                <img src="./Ico/dasboard.png" alt="Dashboard Icon">
+                <span>Dashboard</span>
+            </a></li>
+            <li><a href="#">
+                <img src="./Ico/data.png" alt="Master Data Icon">
+                <span>Master Data</span>
+            </a></li>
+            <li><a href="#">
+                <img src="./Ico/mail.png" alt="Pesan Masuk Icon">
+                <span>Pesan Masuk</span>
+            </a></li>
+            <li><a href="#">
+                <img src="./Ico/profile.png" alt="Profile Icon">
+                <span>Profile</span>
+            </a></li>
+        </ul>
+    </div>
+
+    <!-- Added profile-info div for profile image and name -->
+    
+    <main class="content dasboard bg-white flex flex-col overflow-hidden relative">
+        <div class="profile-info">
+            <div></div>
+            <div class="tn:gap-x-2 flex justify-between items-center gap-x-2.5 relative">
+                <button class="menu-toggle"></button>
+                <div class="tn:gap-x-2 flex relative min-w-0 w-full justify-end">
+                    <div class="flex flex-col gap-y-0.5 relative min-w-0 text-right mr-2">
+                        <h3 class="md:text-[18px] md:items-start xxs:text-[16px] font-normal text-[20px] leading-[1.2] font-Inter text-black relative" id="userNameDisplay">
+                            Nama Pengguna
+                        </h3>
+                        <script>
+                            // Get the userName from localStorage
+                            const userName = localStorage.getItem('userName');
+                    
+                            // Update the HTML content if userName exists
+                            if (userName) {
+                                document.getElementById('userNameDisplay').textContent = userName;
+                            }
+                        </script>
+                        <h5 class="font-normal text-[15px] leading-[1.2] font-Inter text-black relative">
+                            Admin
+                        </h5>
+                    </div>
+                    <img class="w-[41px] h-[41px] object-cover relative mt-0.5 mb-px" src="./assets/profile.jpeg" alt="alt text" />
+                </div>
+            </div>
+        </div>
+    
+        <section class="flex flex-col relative">
+            <div class="xs:mt-3 xs:mx-4 xs:mb-0 tn:mt-3 tn:mx-2 tn:mb-0 flex flex-col relative mt-3">
+                <div class="tn:gap-x-2 flex justify-between items-center gap-x-2.5 relative">
+                    <button class="menu-toggle"></button>
+                </div>
+            </div>
+        </section>
+
+       
+    </main>
+    <script type="text/javascript">
+        AOS.init();
+        new Sticky('.sticky-effect');
+    </script>
+</body>
+</html>

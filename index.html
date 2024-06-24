@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="./src/style.css" />
     <link rel="stylesheet" href="src/carousel/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="src/carousel/assets/owl.theme.default.min.css" />
+
+    <!-- preload image -->
+    <link rel="preload" href="./src/icon/logout.png" as="image">
+    <link rel="preload" href="./src/img/2149341088.jpg" as="image">
+    <link rel="preload" href="./src/img/2148127324.jpg" as="image">
+    <link rel="preload" href="./src/img/group-colleagues-with-diploma-bg.jpg" as="image">
+    <link rel="preload" href="./src/img/woman-wheelchair-with-tablet.jpg" as="image">
+
     <!-- <link rel="stylesheet" href="./src/output.css"> -->
     <style>
       .dashboard-btn {
@@ -86,7 +94,7 @@
                 <a href="#hero" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Beranda </a>
               </li>
               <li>
-                <a href="#form-help" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Pelayanan Data</a>
+                <a href="./pelayanan_data/index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Pelayanan Data</a>
               </li>
               <li>
                 <a href="#about-program" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Informasi</a>
@@ -166,7 +174,7 @@
                   registerBtnDesktop.parentNode.innerHTML = `
                       <div class="dashboard-wrapper">
                             <div class="logout-container">
-                                <img src="/src/icon/logout.png" alt="Logout" class="logout-icon" id="logoutBtnDesktop">
+                                <img src="./src/icon/logout.png" alt="Logout" class="logout-icon" id="logoutBtnDesktop">
                             </div>
                             <a href="/Dashboard/Users/Dasboard-users.html" type="button" class="dashboard-link text-black focus:ring-4 focus: font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-200 dark:text-black dark: dark:hover: dark:hover:dark:focus:">
                                 Dashboard
@@ -250,21 +258,21 @@
             <div class="bg-blue-100 py-12 px-12 basis-full md:basis-1/2 relative rounded-xl">
               <h5 class="text-black font-semibold text-xl mb-2 capitalize">are you looking scholarship?</h5>
               <p class="text-xs text-black font-light mb-6">We are committed to providing our customers with exceptional service.</p>
-              <div class="absolute bottom-2 lg:bottom-2">
+              <div class="absolute bottom-2 lg:bottom-5">
                 <a href="Beasiswa/scholarship.html" type="button" class="text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 transition">Daftar</a>
               </div>
             </div>
             <div class="bg-red-100 py-12 px-12 basis-full md:basis-1/2 rounded-xl relative">
               <h5 class="text-black font-semibold text-xl mb-2 capitalize">Are you looking for a job?</h5>
               <p class="text-xs text-black font-light mb-6">We are committed to providing our customers with exceptional service.</p>
-              <div class="absolute bottom-2 lg:bottom-2">
+              <div class="absolute bottom-2 lg:bottom-5">
                 <a href="/form pendaftaran kerja/pendaftaran-kerja.html" type="button" class="text-white bg-gray-800 hover:bg-white hover:text-gray-900 transition focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Daftar</a>
               </div>
             </div>
             <div class="bg-gray-300 py-12 px-12 basis-full md:basis-1/2 rounded-xl relative">
               <h5 class="text-black font-semibold text-xl mb-2 capitalize">mulai pengisian data anda</h5>
               <p class="text-xs text-black font-light mb-6">We are committed to providing our customers with exceptional service.</p>
-              <div class="absolute bottom-2 lg:bottom-2">
+              <div class="absolute bottom-2 lg:bottom-5">
                 <a href="/pengaduan/index.html" type="button" class="text-black bg-white hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 transition">Pengaduan</a>
               </div>
             </div>
@@ -570,7 +578,7 @@
             <div class="flex flex-col lg:flex-row gap-6">
               <div class="basis-1/2">
                 <div class="news-image w-full">
-                  <img src="./src/img/group-colleagues-with-diploma.jpg" class="w-full d:h-[400px] rounded-xl" alt="" />
+                  <img src="./src/img/group-colleagues-with-diploma.jpg" class="w-full md:h-[400px] rounded-xl" loading="lazy" alt="" />
                 </div>
                 <div class="mt-4">
                   <span class="bg-blue-100 text-black text-xs font-medium me-2 px-2.5 py-2 rounded">Education</span>
@@ -580,7 +588,7 @@
               </div>
               <div class="basis-1/2">
                 <div class="news-image w-full">
-                  <img src="./src/img/10756846_4539340.jpg" class="w-full md:h-[400px] rounded-xl" alt="" />
+                  <img src="./src/img/10756846_4539340.jpg" loading="lazy" class="w-full md:h-[400px] rounded-xl" alt="" />
                 </div>
                 <div class="mt-4">
                   <span class="bg-blue-100 text-black text-xs font-medium me-2 px-2.5 py-2 rounded">Social</span>

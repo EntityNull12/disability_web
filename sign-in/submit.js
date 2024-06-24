@@ -28,10 +28,10 @@ document.querySelectorAll('.toggle-password').forEach(item => {
     const target = document.getElementById(this.getAttribute('data-target'));
     if (target.type === 'password') {
       target.type = 'text';
-      this.src = '../src/images/hide.png'; // change to hide image
+      this.src = '/src/images/hide.png'; // change to hide image
     } else {
       target.type = 'password';
-      this.src = '../src/images/show.png'; // change to show image
+      this.src = '/src/images/show.png'; // change to show image
     }
   });
 });

@@ -30,9 +30,15 @@ body, html {
 
 .rectangle-1 {
   flex: 1;
-  background: url('/src/images/12325316_4955656.jpg') no-repeat center;
+  /* background: url('/src/images/12325316_4955656.jpg') no-repeat center; */
   background-size: cover;
   border-radius: 45px 0 0 45px;
+  align-content: center;
+}
+
+.rectangle-1 img{
+  width: 100%;
+  ;
 }
 
 .flex-column-fc {

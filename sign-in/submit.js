@@ -107,7 +107,7 @@ submit.addEventListener("click", async function (event) {
     localStorage.setItem('userEmail', email); // Simpan email pengguna di localStorage
     localStorage.setItem('userNik', nik) // Simpan nik pengguna di localStorage
 
-    window.location.href = "/landing-page.html"; // Redirect to landing page
+    window.location.href = "/index.html"; // Redirect to landing page
   } catch (error) {
     const errorMessage = error.message;
     showModal("Error: " + errorMessage);

@@ -105,7 +105,7 @@ document.querySelector('.rectangle-button').addEventListener('click', async (eve
                 localStorage.setItem('userName', userDocData['name']);
 
                 // Redirect to user page
-                window.location.href = "/landing-page";
+                window.location.href = "/disability_web/";
             } else {
                 document.getElementById('message').textContent = "No matching user found in Firestore.";
             }

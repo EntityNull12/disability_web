@@ -27,10 +27,10 @@ document.querySelectorAll('.toggle-password').forEach(item => {
       const target = document.getElementById(this.getAttribute('data-target'));
       if (target.type === 'password') {
           target.type = 'text';
-          this.src = '/src/images/visible.png'; // change to show image
+          this.src = '../src/images/visible.png'; // change to show image
       } else {
           target.type = 'password';
-          this.src = '/src/images/hide.png'; // change to hide image
+          this.src = '../src/images/hide.png'; // change to hide image
       }
   });
 });
@@ -90,7 +90,7 @@ document.querySelector('.rectangle-button').addEventListener('click', async (eve
             localStorage.setItem('userName', adminDocData['nama admin']);
           
             // Redirect to admin page
-            window.location.href = "/Dashboard/Dasboard-admin.html";
+            window.location.href = "../Dashboard/Dasboard-admin.html";
         } else {
             // Check if the user is a normal user
             const usersCollection = collection(db, "users");

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran Pekerjaan</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+</head>
+<body class="bg-gray-200">
+    <div class="container mx-auto p-4">
+        <form id="jobApplicationForm" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div class="text-2xl mb-4">Form Pendaftaran Pekerjaan</div>
+            
+            <!-- Nama Lengkap -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="fullName">Nama Lengkap:</label>
+                <input type="text" id="fullName" name="fullName" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            
+            <!-- Email -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email:</label>
+                <input type="email" id="email" name="email" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            
+            <!-- Nomor Telepon -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">Nomor Telepon:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]*" inputmode="numeric" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            
+            <!-- Jenis Kelamin -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2">Jenis Kelamin:</label>
+                <div class="flex items-center">
+                    <input type="radio" id="Pria" name="gender" value="Pria" class="mr-2 leading-tight">
+                    <label for="Pria" class="text-sm">Pria</label>
+                </div>
+                <div class="flex items-center">
+                    <input type="radio" id="Wanita" name="gender" value="Wanita" class="mr-2 leading-tight">
+                    <label for="Wanita" class="text-sm">Wanita</label>
+                </div>
+            </div>
+            
+            <!-- Usia -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="usia">Usia:</label>
+                <input type="text" id="usia" name="usia" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            
+            <!-- Alamat Lengkap -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="address">Alamat Lengkap:</label>
+                <textarea id="address" name="address" rows="3" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+            </div>
+            
+            <!-- Pendidikan Terakhir -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="education">Pendidikan Terakhir:</label>
+                <input type="text" id="education" name="education" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            
+            <!-- Posisi yang Dilamar -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="position">Posisi yang Dilamar:</label>
+                <input type="text" id="position" name="position" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            
+            <!-- Pengalaman Kerja -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="experience">Pengalaman Kerja:</label>
+                <textarea id="experience" name="experience" rows="3" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+            </div>
+            
+            <!-- Keterampilan -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="skills">Keterampilan:</label>
+                <textarea id="skills" name="skills" rows="3" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+            </div>
+            
+            <!-- Referensi -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="references">Referensi:</label>
+                <textarea id="references" name="references" rows="3" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+            </div>
+            
+            <!-- Unggah CV -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="cv">Unggah CV:</label>
+                <input type="file" id="cv" name="cv" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            
+            <!-- Unggah Surat Lamaran -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="coverLetter">Unggah Surat Lamaran:</label>
+                <input type="file" id="coverLetter" name="coverLetter" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            
+            <div class="flex items-center justify-between">
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Kirim</button>
+            </div>
+            
+            <div id="message" class="mt-4 text-center"></div>
+        </form>
+    </div>
+    <script src="./js/script-form-kerja.js"></script>
+</body>
+</html>

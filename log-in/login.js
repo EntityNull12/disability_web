@@ -90,7 +90,7 @@ document.querySelector('.rectangle-button').addEventListener('click', async (eve
             localStorage.setItem('userName', adminDocData['nama admin']);
           
             // Redirect to admin page
-            window.location.href = "../Dashboard/Dasboard-admin.html";
+            window.location.href = "../Dashboard/admin/Dasboard-admin.html";
         } else {
             // Check if the user is a normal user
             const usersCollection = collection(db, "users");

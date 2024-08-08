@@ -138,4 +138,60 @@
     <script src="../src/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const email = localStorage.getItem("email");
+    if (email) {
+      const loginBtn = document.getElementById("loginBtn");
+      const registerBtn = document.getElementById("registerBtn");
+      const loginBtnDesktop = document.getElementById("loginBtnDesktop");
+      const registerBtnDesktop = document.getElementById("registerBtnDesktop");
+
+      if (loginBtn && registerBtn) {
+        loginBtn.parentNode.removeChild(loginBtn);
+        registerBtn.parentNode.innerHTML = `
+                     <div class="dashboard-wrapper">
+                        <div class="logout-container">
+                            <img src="/src/icon/logout.png" alt="Logout" class="logout-icon" id="logoutBtn">
+                        </div>
+                       <a href="/Dashboard/Users/Dasboard-users.html" type="button" class="dashboard-link text-black focus:ring-4 focus: font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-200 dark:text-black dark: dark:hover: dark:hover:dark:focus:">
+                            Dashboard
+                        </a>
+                    </div>
+                `;
+      }
+
+      if (loginBtnDesktop && registerBtnDesktop) {
+        loginBtnDesktop.parentNode.removeChild(loginBtnDesktop);
+        registerBtnDesktop.parentNode.innerHTML = `
+                  <div class="dashboard-wrapper">
+                        <div class="logout-container">
+                            <img src="./src/icon/logout.png" alt="Logout" class="logout-icon" id="logoutBtnDesktop">
+                        </div>
+                        <a href="/Dashboard/Users/Dasboard-users.html" type="button" class="dashboard-link text-black focus:ring-4 focus: font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-200 dark:text-black dark: dark:hover: dark:hover:dark:focus:">
+                            Dashboard
+                        </a>
+                    </div>
+                `;
+      }
+
+      const logoutBtn = document.getElementById("logoutBtn");
+      const logoutBtnDesktop = document.getElementById("logoutBtnDesktop");
+
+      if (logoutBtn) {
+        logoutBtn.addEventListener("click", function () {
+          localStorage.clear();
+          window.location.reload();
+        });
+      }
+
+      if (logoutBtnDesktop) {
+        logoutBtnDesktop.addEventListener("click", function () {
+          localStorage.clear();
+          window.location.reload();
+        });
+      }
+    }
+  });
+</script>
 </html>

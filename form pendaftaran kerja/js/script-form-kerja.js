@@ -1,4 +1,4 @@
-// Your web app's Firebase configuration
+// Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyDYQ9CqFLGwHfJXUEYGZTocX2V_esEVDyw",
     authDomain: "websitedatabasetest.firebaseapp.com",
@@ -34,12 +34,6 @@ document.getElementById('jobApplicationForm').addEventListener('submit', functio
     var coverLetter = document.getElementById('coverLetter').files[0];
 
     // Save data to Firestore under 'jobApplications/{applicantID}'
-    var userNIK = localStorage.getItem('userNIK');
-    if (!userNIK) {
-        showMessage('Gagal menyimpan data: userNIK tidak tersedia.', true);
-        return;
-    }
-
     var applicationDocRef = db.collection('jobApplications').doc();
 
     applicationDocRef.set({

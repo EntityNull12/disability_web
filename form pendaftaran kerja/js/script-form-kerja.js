@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-
 // Form submission handler
 document.getElementById('jobApplicationForm').addEventListener('submit', function (e) {
     e.preventDefault(); // Prevent default form submission
@@ -45,40 +44,69 @@ document.getElementById('jobApplicationForm').addEventListener('submit', functio
     var cv = document.getElementById('cv').files[0];
     var coverLetter = document.getElementById('coverLetter').files[0];
 
-    // Save data to Firestore under 'jobApplications/{applicantID}'
-    var applicationDocRef = db.collection('jobApplications').doc();
+    // Ambil nama pengguna dari localStorage
+    const userName = localStorage.getItem('userName') || "Unknown";
 
-    applicationDocRef.set({
-        fullName: fullName,
-        email: email,
-        phone: phone,
-        gender: gender,
-        usia: usia,
-        address: address,
-        education: education,
-        position: position
-    })
-    .then(function() {
-        // Upload CV and Cover Letter to Firebase Storage if provided
-        if (cv || coverLetter) {
-            uploadDocuments(applicationDocRef.id, cv, coverLetter);
+    // Buat nama folder dengan format "Berkas pengajuan {NamaPengguna}"
+    var folderName = `Berkas pengajuan ${userName}`;
+
+    // Use the fullName as the document ID
+    var applicationDocId = fullName.replace(/[^a-zA-Z0-9]/g, "_");
+
+    // Show uploading message
+    showMessage('Sedang mengunggah, harap tunggu...');
+
+    // Check if the document already exists
+    db.collection('jobApplications').doc(folderName).collection('applications').doc(applicationDocId).get()
+    .then(function(doc) {
+        if (doc.exists) {
+            showMessage('Anda sudah mengajukan lamaran. Hanya satu kali pengajuan diperbolehkan.', true);
         } else {
-            showMessage('Data berhasil disimpan.');
+            // Save data to Firestore under 'jobApplications/{folderName}/{applicationDocId}'
+            var applicationDocRef = db.collection('jobApplications').doc(folderName).collection('applications').doc(applicationDocId);
+
+            applicationDocRef.set({
+                fullName: fullName,
+                email: email,
+                phone: phone,
+                gender: gender,
+                usia: usia,
+                address: address,
+                education: education,
+                position: position
+            })
+            .then(function() {
+                // Upload CV and Cover Letter to Firebase Storage if provided
+                if (cv || coverLetter) {
+                    uploadDocuments(folderName, applicationDocId, cv, coverLetter);
+                } else {
+                    showMessage('Data berhasil disimpan.');
+                }
+            })
+            .catch(function(error) {
+                console.error("Error adding document: ", error);
+                showMessage('Terjadi kesalahan saat menyimpan data.', true);
+            });
         }
     })
     .catch(function(error) {
-        console.error("Error adding document: ", error);
-        showMessage('Terjadi kesalahan saat menyimpan data.', true);
+        console.error("Error checking document existence: ", error);
+        showMessage('Terjadi kesalahan saat memeriksa data.', true);
     });
 });
 
 // Function to upload CV and Cover Letter to Firebase Storage
-function uploadDocuments(docId, cv, coverLetter) {
+function uploadDocuments(folderName, docId, cv, coverLetter) {
     var storageRef = storage.ref();
-    var docRef = storageRef.child('job_applications/' + docId);
+    var docRef = storageRef.child('job_applications/' + folderName );
+
+    var uploadTasks = []; // To track all upload tasks
 
     if (cv) {
-        var cvUploadTask = docRef.child('cv/' + cv.name).put(cv);
+        var cvFileName = `${docId}_CV.${cv.name.split('.').pop()}`;
+        var cvUploadTask = docRef.child('cv/' + cvFileName).put(cv);
+
+        uploadTasks.push(cvUploadTask);
 
         cvUploadTask.on('state_changed', 
             function(snapshot) {
@@ -95,7 +123,10 @@ function uploadDocuments(docId, cv, coverLetter) {
     }
 
     if (coverLetter) {
-        var coverLetterUploadTask = docRef.child('coverLetter/' + coverLetter.name).put(coverLetter);
+        var coverLetterFileName = `${docId}_CoverLetter.${coverLetter.name.split('.').pop()}`;
+        var coverLetterUploadTask = docRef.child('coverLetter/' + coverLetterFileName).put(coverLetter);
+
+        uploadTasks.push(coverLetterUploadTask);
 
         coverLetterUploadTask.on('state_changed', 
             function(snapshot) {
@@ -110,6 +141,14 @@ function uploadDocuments(docId, cv, coverLetter) {
             }
         );
     }
+
+    // Wait for all uploads to finish
+    Promise.all(uploadTasks.map(task => task)).then(function() {
+        showMessage('Data dan dokumen berhasil diunggah.');
+    }).catch(function(error) {
+        console.error('Error during upload process: ', error);
+        showMessage('Terjadi kesalahan saat mengunggah dokumen.', true);
+    });
 }
 
 // Function to display messages to the user

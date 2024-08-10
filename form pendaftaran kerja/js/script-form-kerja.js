@@ -14,6 +14,21 @@ firebase.initializeApp(firebaseConfig);
 var db = firebase.firestore();
 var storage = firebase.storage();
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Ambil nama dan email dari localStorage
+    const userName = localStorage.getItem('userName');
+    const userEmail = localStorage.getItem('userEmail');
+
+    // Isi input nama dan email secara otomatis jika data ada di localStorage
+    if (userName) {
+        document.getElementById('fullName').value = userName;
+    }
+    if (userEmail) {
+        document.getElementById('email').value = userEmail;
+    }
+});
+
+
 // Form submission handler
 document.getElementById('jobApplicationForm').addEventListener('submit', function (e) {
     e.preventDefault(); // Prevent default form submission
@@ -27,9 +42,6 @@ document.getElementById('jobApplicationForm').addEventListener('submit', functio
     var address = document.getElementById('address').value;
     var education = document.getElementById('education').value;
     var position = document.getElementById('position').value;
-    var experience = document.getElementById('experience').value;
-    var skills = document.getElementById('skills').value;
-    var references = document.getElementById('references').value;
     var cv = document.getElementById('cv').files[0];
     var coverLetter = document.getElementById('coverLetter').files[0];
 
@@ -44,10 +56,7 @@ document.getElementById('jobApplicationForm').addEventListener('submit', functio
         usia: usia,
         address: address,
         education: education,
-        position: position,
-        experience: experience,
-        skills: skills,
-        references: references
+        position: position
     })
     .then(function() {
         // Upload CV and Cover Letter to Firebase Storage if provided

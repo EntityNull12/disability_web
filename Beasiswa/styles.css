@@ -10,19 +10,19 @@
   .banner {
     background: url('/src/images/12325316_4955656.jpg') no-repeat center center/cover;
     color: #fff;
-    padding: 100px 0;
+    /* padding: 100px 0;  */
     text-align: center;
   }
   
-  .banner h1 {
+  /* .banner h1 {
     margin-bottom: 10px;
     font-size: 40px;
-  }
+  } */
   
-  .banner p {
+  /* .banner p {
     font-size: 20px;
     margin-bottom: 20px;
-  }
+  } */
   
   /* About Section Styles */
   .about {
@@ -74,7 +74,7 @@ body {
 
 .banner {
     background: url('banner-image.jpg') no-repeat center center/cover;
-    height: 100vh;
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,31 +82,25 @@ body {
     color: #fff;
 }
 
-.banner h1 {
+/* .banner h1 {
     font-size: 3rem;
     margin-bottom: 20px;
-}
+} */
 
-.banner p {
+/* .banner p {
     font-size: 1.5rem;
     margin-bottom: 40px;
-}
+} */
 
-.banner .btn {
+/* .banner .btn {
     background-color: #007bff;
     color: #fff;
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
     font-size: 1.2rem;
-}
+} */
 
-section.content {
-  display: flex;
-  justify-content: center; /* Memusatkan konten secara horizontal */
-  margin: 50px auto; /* Mengatur margin atas dan bawah 50px, dan otomatis menyesuaikan margin samping */
-  max-width: 1200px; /* Batas lebar konten agar tidak terlalu lebar di layar besar */
-}
 
 aside.filters {
   width: 25%;
@@ -126,19 +120,18 @@ aside.filters select {
   margin-bottom: 20px;
 }
 
-main.scholarships {
+/* main.scholarships {
   flex-grow: 1;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-}
+} */
 
 .scholarship-card {
   background-color: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 5px;
-  width: calc(50% - 10px); /* 2 kartu per baris, dengan jarak 20px menggunakan gap */
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px; /* Spasi di antara kartu */

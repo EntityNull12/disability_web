@@ -98,10 +98,10 @@
   <!-- Home Banner -->
   <section id="home" class=" text-center pt-32">
     <div class="container mx-auto px-4 md:mx-auto">
-      <h1 class="font-bold text-3xl">Find Your Dream Job</h1>
-      <p class="mt-4">Register now and start your career journey!</p>
+      <h1 class="font-bold text-5xl">Find Your Dream Job</h1>
+      <p class="mt-4 text-2xl">Register now and start your career journey!</p>
       <div class="mt-6">
-        <a id="regist" href="./form-pendaftaran-kerja.html" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Register Now</a>
+        <a id="regist" href="./form-pendaftaran-kerja.html" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-md px-5 py-2.5 me-2 mb-2">Register Now</a>
         <script>
           document.getElementById('regist').addEventListener('click', function(event) {
               event.preventDefault(); // Mencegah tindakan default tombol
@@ -122,8 +122,8 @@
   <!-- Job List and Filter -->
   <section class="mt-32 ">
     <div class="title-job text-center container px-4 md:px-0 mx-auto">
-      <h3 class="font-semibold text-3xl">Temukan Karir Anda Disini...</h3>
-      <p class="mt-4 text-md">Temukan karir Anda dengan mudah!</p>
+      <h3 class="font-bold text-5xl">Temukan Karir Anda Disini...</h3>
+      <p class="mt-4 text-2xl">Temukan karir Anda dengan mudah!</p>
     </div>
     <aside class="mt-8 container px-4 md:px-0 md:mx-auto xl:px-8">
       <div class="">
@@ -131,7 +131,7 @@
          <div class="flex flex-row gap-4">
         <div class="flex flex-col md:flex-row gap-4">
           <div class="w-[160px] lg:w-[240px] ">
-            <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+            <select class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
               <option value="" disabled>Job Category</option>
               <option value="it">IT</option>
               <option value="marketing">Marketing</option>
@@ -140,7 +140,7 @@
             </select>
           </div>
           <div class="w-[160px] lg:w-[240px]">
-            <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+            <select class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
               <option value="" disabled>Job Type</option>
               <option value="full-time">Full-time</option>
               <option value="part-time">Part-time</option>
@@ -151,7 +151,7 @@
           </div>
           <div class="flex flex-col md:flex-row gap-4">
           <div class="w-[160px] lg:w-[240px]">
-            <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+            <select class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
             <option value="" disabled>Location</option>
             <option value="jakarta">Jakarta</option>
             <option value="bandung">Bandung</option>
@@ -160,7 +160,7 @@
             </select>
           </div>
           <div class="w-[160px] lg:w-[240px]">
-            <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+            <select class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
               <option value="latest">Latest</option>
               <option value="oldest">Oldest</option>
               <option value="alphabetical">Alphabetical</option>
@@ -171,87 +171,86 @@
       </div>
     </div>
     </aside>
-    <div class="job-list container mx-auto mt-8 px-4 md:px-0 xl:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 container mx-auto mt-8 px-4 md:px-0 xl:px-8">
       <div class="job-item" onclick="location.href='job-detail.html'">
         <img src="../src/img/1940.webp" alt="" srcset="" class="w-[350px] rounded-lg mb-4 mx-auto">
-        <h2 class=" text-md">PT. ABCD</h2>
-        <h1 class="font-semibold text-xl mb-4">Software Engineer</h1>
-        <p><span class="font-semibold">Location:</span> Jakarta</p>
-        <p><span class="font-semibold">Job Type:</span> Full-time</p>
-        <p><span class="font-semibold">Posted:</span> 2 days ago</p>
-      </div>
-      <div class="job-item" onclick="location.href='job-detail.html'">
-        <img src="../src/img/1940.webp" alt="" srcset="" class="w-[350px] rounded-lg mb-4 mx-auto">
-        <h2 class=" text-md">PT. ABCD</h2>
-        <h1 class="font-semibold text-xl mb-4">Software Engineer</h1>
-        <p><span class="font-semibold">Location:</span> Jakarta</p>
-        <p><span class="font-semibold">Job Type:</span> Full-time</p>
-        <p><span class="font-semibold">Posted:</span> 2 days ago</p>
+        <h2 class=" text-md text-gray-400">PT. ABCD</h2>
+        <h1 class="font-semibold text-2xl mb-4">Software Engineer</h1>
+        <p class="text-lg"><span class="font-semibold">Location:</span> Jakarta</p>
+        <p class="text-lg"><span class="font-semibold">Job Type:</span> Full-time</p>
+        <p class="text-lg"><span class="font-semibold">Posted:</span> 2 days ago</p>
       </div>
       <div class="job-item" onclick="location.href='job-detail.html'">
         <img src="../src/img/1940.webp" alt="" srcset="" class="w-[350px] rounded-lg mb-4 mx-auto">
-        <h2 class=" text-md">PT. ABCD</h2>
-        <h1 class="font-semibold text-xl mb-4">Software Engineer</h1>
-        <p><span class="font-semibold">Location:</span> Jakarta</p>
-        <p><span class="font-semibold">Job Type:</span> Full-time</p>
-        <p><span class="font-semibold">Posted:</span> 2 days ago</p>
+        <h2 class=" text-md text-gray-400">PT. ABCD</h2>
+        <h1 class="font-semibold text-2xl mb-4">Software Engineer</h1>
+        <p class="text-lg"><span class="font-semibold">Location:</span> Jakarta</p>
+        <p class="text-lg"><span class="font-semibold">Job Type:</span> Full-time</p>
+        <p class="text-lg"><span class="font-semibold">Posted:</span> 2 days ago</p>
       </div>
       <div class="job-item" onclick="location.href='job-detail.html'">
         <img src="../src/img/1940.webp" alt="" srcset="" class="w-[350px] rounded-lg mb-4 mx-auto">
-        <h2 class=" text-md">PT. ABCD</h2>
-        <h1 class="font-semibold text-xl mb-4">Software Engineer</h1>
-        <p><span class="font-semibold">Location:</span> Jakarta</p>
-        <p><span class="font-semibold">Job Type:</span> Full-time</p>
-        <p><span class="font-semibold">Posted:</span> 2 days ago</p>
+        <h2 class=" text-md text-gray-400">PT. ABCD</h2>
+        <h1 class="font-semibold text-2xl mb-4">Software Engineer</h1>
+        <p class="text-lg"><span class="font-semibold">Location:</span> Jakarta</p>
+        <p class="text-lg"><span class="font-semibold">Job Type:</span> Full-time</p>
+        <p class="text-lg"><span class="font-semibold">Posted:</span> 2 days ago</p>
       </div>
       <div class="job-item" onclick="location.href='job-detail.html'">
         <img src="../src/img/1940.webp" alt="" srcset="" class="w-[350px] rounded-lg mb-4 mx-auto">
-        <h2 class=" text-md">PT. ABCD</h2>
-        <h1 class="font-semibold text-xl mb-4">Software Engineer</h1>
-        <p><span class="font-semibold">Location:</span> Jakarta</p>
-        <p><span class="font-semibold">Job Type:</span> Full-time</p>
-        <p><span class="font-semibold">Posted:</span> 2 days ago</p>
+        <h2 class=" text-md text-gray-400">PT. ABCD</h2>
+        <h1 class="font-semibold text-2xl mb-4">Software Engineer</h1>
+        <p class="text-lg"><span class="font-semibold">Location:</span> Jakarta</p>
+        <p class="text-lg"><span class="font-semibold">Job Type:</span> Full-time</p>
+        <p class="text-lg"><span class="font-semibold">Posted:</span> 2 days ago</p>
       </div>
       <div class="job-item" onclick="location.href='job-detail.html'">
         <img src="../src/img/1940.webp" alt="" srcset="" class="w-[350px] rounded-lg mb-4 mx-auto">
-        <h2 class=" text-md">PT. ABCD</h2>
-        <h1 class="font-semibold text-xl mb-4">Software Engineer</h1>
-        <p><span class="font-semibold">Location:</span> Jakarta</p>
-        <p><span class="font-semibold">Job Type:</span> Full-time</p>
-        <p><span class="font-semibold">Posted:</span> 2 days ago</p>
+        <h2 class=" text-md text-gray-400">PT. ABCD</h2>
+        <h1 class="font-semibold text-2xl mb-4">Software Engineer</h1>
+        <p class="text-lg"><span class="font-semibold">Location:</span> Jakarta</p>
+        <p class="text-lg"><span class="font-semibold">Job Type:</span> Full-time</p>
+        <p class="text-lg"><span class="font-semibold">Posted:</span> 2 days ago</p>
       </div>
       <div class="job-item" onclick="location.href='job-detail.html'">
         <img src="../src/img/1940.webp" alt="" srcset="" class="w-[350px] rounded-lg mb-4 mx-auto">
-        <h2 class=" text-md">PT. ABCD</h2>
-        <h1 class="font-semibold text-xl mb-4">Software Engineer</h1>
-        <p><span class="font-semibold">Location:</span> Jakarta</p>
-        <p><span class="font-semibold">Job Type:</span> Full-time</p>
-        <p><span class="font-semibold">Posted:</span> 2 days ago</p>
+        <h2 class=" text-md text-gray-400">PT. ABCD</h2>
+        <h1 class="font-semibold text-2xl mb-4">Software Engineer</h1>
+        <p class="text-lg"><span class="font-semibold">Location:</span> Jakarta</p>
+        <p class="text-lg"><span class="font-semibold">Job Type:</span> Full-time</p>
+        <p class="text-lg"><span class="font-semibold">Posted:</span> 2 days ago</p>
       </div>
       <div class="job-item" onclick="location.href='job-detail.html'">
         <img src="../src/img/1940.webp" alt="" srcset="" class="w-[350px] rounded-lg mb-4 mx-auto">
-        <h2 class=" text-md">PT. ABCD</h2>
-        <h1 class="font-semibold text-xl mb-4">Software Engineer</h1>
-        <p><span class="font-semibold">Location:</span> Jakarta</p>
-        <p><span class="font-semibold">Job Type:</span> Full-time</p>
-        <p><span class="font-semibold">Posted:</span> 2 days ago</p>
-      </div>
-      <div class="job-item" onclick="location.href='job-detail.html'">
-        <img src="../src/img/1940.webp" alt="" srcset="" class="w-[350px] h-[250px] lg:w-full  rounded-lg mb-4 mx-auto">
-        <h2 class=" text-md">PT. ABCD</h2>
-        <h1 class="font-semibold text-xl mb-4">Software Engineer</h1>
-        <p><span class="font-semibold">Location:</span> Jakarta</p>
-        <p><span class="font-semibold">Job Type:</span> Full-time</p>
-        <p><span class="font-semibold">Posted:</span> 2 days ago</p>
+        <h2 class=" text-md text-gray-400">PT. ABCD</h2>
+        <h1 class="font-semibold text-2xl mb-4">Software Engineer</h1>
+        <p class="text-lg"><span class="font-semibold">Location:</span> Jakarta</p>
+        <p class="text-lg"><span class="font-semibold">Job Type:</span> Full-time</p>
+        <p class="text-lg"><span class="font-semibold">Posted:</span> 2 days ago</p>
       </div>
       <div class="job-item" onclick="location.href='job-detail.html'">
         <img src="../src/img/1940.webp" alt="" srcset="" class="w-[350px] rounded-lg mb-4 mx-auto">
-        <h2 class=" text-md">PT. ABCD</h2>
-        <h1 class="font-semibold text-xl mb-4">Software Engineer</h1>
-        <p><span class="font-semibold">Location:</span> Jakarta</p>
-        <p><span class="font-semibold">Job Type:</span> Full-time</p>
-        <p><span class="font-semibold">Posted:</span> 2 days ago</p>
+        <h2 class=" text-md text-gray-400">PT. ABCD</h2>
+        <h1 class="font-semibold text-2xl mb-4">Software Engineer</h1>
+        <p class="text-lg"><span class="font-semibold">Location:</span> Jakarta</p>
+        <p class="text-lg"><span class="font-semibold">Job Type:</span> Full-time</p>
+        <p class="text-lg"><span class="font-semibold">Posted:</span> 2 days ago</p>
       </div>
+      <div class="job-item" onclick="location.href='job-detail.html'">
+        <img src="../src/img/1940.webp" alt="" srcset="" class="w-[350px] rounded-lg mb-4 mx-auto">
+        <h2 class=" text-md text-gray-400">PT. ABCD</h2>
+        <h1 class="font-semibold text-2xl mb-4">Software Engineer</h1>
+        <p class="text-lg"><span class="font-semibold">Location:</span> Jakarta</p>
+        <p class="text-lg"><span class="font-semibold">Job Type:</span> Full-time</p>
+        <p class="text-lg"><span class="font-semibold">Posted:</span> 2 days ago</p>
+      </div><div class="job-item" onclick="location.href='job-detail.html'">
+        <img src="../src/img/1940.webp" alt="" srcset="" class="w-[350px] rounded-lg mb-4 mx-auto">
+        <h2 class=" text-md text-gray-400">PT. ABCD</h2>
+        <h1 class="font-semibold text-2xl mb-4">Software Engineer</h1>
+        <p class="text-lg"><span class="font-semibold">Location:</span> Jakarta</p>
+        <p class="text-lg"><span class="font-semibold">Job Type:</span> Full-time</p>
+        <p class="text-lg"><span class="font-semibold">Posted:</span> 2 days ago</p>
+      </div> 
     </div>
   </section>
 

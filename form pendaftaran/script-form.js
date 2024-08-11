@@ -1,4 +1,4 @@
-// Your web app's Firebase configuration
+// Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyDYQ9CqFLGwHfJXUEYGZTocX2V_esEVDyw",
     authDomain: "websitedatabasetest.firebaseapp.com",
@@ -13,6 +13,20 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 var db = firebase.firestore();
 var storage = firebase.storage();
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Ambil nama dan email dari localStorage
+    const userName = localStorage.getItem('userName');
+    const userEmail = localStorage.getItem('userEmail');
+
+    // Isi input nama dan email secara otomatis jika data ada di localStorage
+    if (userName) {
+        document.getElementById('fullName').value = userName;
+    }
+    if (userEmail) {
+        document.getElementById('email').value = userEmail;
+    }
+});
 
 // Form submission handler
 document.getElementById('registrationForm').addEventListener('submit', function (e) {
@@ -36,67 +50,98 @@ document.getElementById('registrationForm').addEventListener('submit', function 
     var specialAccommodation = document.getElementById('specialAccommodation').value;
     var additionalDocuments = document.getElementById('additionalDocuments').files;
 
-    // Save data to Firestore under 'users/{userNIK}/pendaftaran_bea'
-    var userNIK = localStorage.getItem('userNIK');
-    if (!userNIK) {
-        showMessage('Gagal menyimpan data: userNIK tidak tersedia.', true);
-        return;
-    }
+    // Ambil nama pengguna dari localStorage
+    const userName = localStorage.getItem('userName') || "Unknown";
 
-    var userDocRef = db.collection('users').doc(userNIK).collection('pendaftaran_bea').doc();
+    // Buat nama folder dengan format "Berkas pengajuan {NamaPengguna}"
+    var folderName = `Berkas pengajuan ${userName}`;
 
-    userDocRef.set({
-        fullName: fullName,
-        email: email,
-        phone: phone,
-        gender: gender,
-        usia: usia,
-        address: address,
-        institution: institution,
-        major: major,
-        parentIncome: parentIncome,
-        achievements: achievements,
-        motivation: motivation,
-        parentContact: parentContact,
-        disabilityType: disabilityType,
-        academicNeeds: academicNeeds,
-        specialAccommodation: specialAccommodation
-    })
-    .then(function() {
-        // Upload additional documents to Firebase Storage if any
-        if (additionalDocuments.length > 0) {
-            uploadDocuments(userDocRef.id, additionalDocuments);
+    // Use the fullName as the document ID
+    var applicationDocId = fullName.replace(/[^a-zA-Z0-9]/g, "_");
+
+    // Show uploading message
+    showMessage('Sedang mengunggah, harap tunggu...');
+
+    // Check if the document already exists
+    db.collection('scholarshipApplications').doc(folderName).collection('applications').doc(applicationDocId).get()
+    .then(function(doc) {
+        if (doc.exists) {
+            showMessage('Anda sudah mengajukan pendaftaran. Hanya satu kali pengajuan diperbolehkan.', true);
         } else {
-            showMessage('Data berhasil disimpan.');
+            // Save data to Firestore under 'scholarshipApplications/{folderName}/{applicationDocId}'
+            var applicationDocRef = db.collection('scholarshipApplications').doc(folderName).collection('applications').doc(applicationDocId);
+
+            applicationDocRef.set({
+                fullName: fullName,
+                email: email,
+                phone: phone,
+                gender: gender,
+                usia: usia,
+                address: address,
+                institution: institution,
+                major: major,
+                parentIncome: parentIncome,
+                achievements: achievements,
+                motivation: motivation,
+                parentContact: parentContact,
+                disabilityType: disabilityType,
+                academicNeeds: academicNeeds,
+                specialAccommodation: specialAccommodation
+            })
+            .then(function() {
+                // Upload additional documents to Firebase Storage if provided
+                if (additionalDocuments.length > 0) {
+                    uploadDocuments(folderName, applicationDocId, additionalDocuments);
+                } else {
+                    showMessage('Data berhasil disimpan.');
+                }
+            })
+            .catch(function(error) {
+                console.error("Error adding document: ", error);
+                showMessage('Terjadi kesalahan saat menyimpan data.', true);
+            });
         }
     })
     .catch(function(error) {
-        console.error("Error adding document: ", error);
-        showMessage('Terjadi kesalahan saat menyimpan data.', true);
+        console.error("Error checking document existence: ", error);
+        showMessage('Terjadi kesalahan saat memeriksa data.', true);
     });
 });
 
 // Function to upload additional documents to Firebase Storage
-function uploadDocuments(docId, files) {
+function uploadDocuments(folderName, docId, documents) {
     var storageRef = storage.ref();
-    var docRef = storageRef.child('additional_documents/' + docId);
+    var docRef = storageRef.child('scholarship_applications/' + folderName );
 
-    Array.from(files).forEach(function(file) {
-        var uploadTask = docRef.child(file.name).put(file);
+    var uploadTasks = []; // To track all upload tasks
 
-        uploadTask.on('state_changed', 
+    for (let i = 0; i < documents.length; i++) {
+        let documentFile = documents[i];
+        let documentFileName = `${docId}_${documentFile.name}`;
+        let documentUploadTask = docRef.child('documents/' + documentFileName).put(documentFile);
+
+        uploadTasks.push(documentUploadTask);
+
+        documentUploadTask.on('state_changed', 
             function(snapshot) {
                 // Track upload progress (optional)
             }, 
             function(error) {
-                console.error('Error uploading file:', error);
+                console.error('Error uploading document:', error);
                 showMessage('Terjadi kesalahan saat mengunggah dokumen.', true);
             }, 
             function() {
-                // When upload is complete
-                showMessage('Data dan dokumen berhasil disimpan.');
+                showMessage('Dokumen berhasil diunggah.');
             }
         );
+    }
+
+    // Wait for all uploads to finish
+    Promise.all(uploadTasks.map(task => task)).then(function() {
+        showMessage('Data dan dokumen berhasil diunggah.');
+    }).catch(function(error) {
+        console.error('Error during upload process: ', error);
+        showMessage('Terjadi kesalahan saat mengunggah dokumen.', true);
     });
 }
 

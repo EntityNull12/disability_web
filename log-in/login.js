@@ -63,12 +63,13 @@ document.querySelector('.rectangle-button').addEventListener('click', async (eve
     const email = emailInput.value;
     const password = passwordInput.value;
 
+    // Always store the email
+    localStorage.setItem('email', email);
+
     if (rememberMeCheckbox.checked) {
-        localStorage.setItem('email', email);
         localStorage.setItem('password', password);
         localStorage.setItem('rememberMe', true);
     } else {
-        localStorage.removeItem('email');
         localStorage.removeItem('password');
         localStorage.removeItem('rememberMe');
     }

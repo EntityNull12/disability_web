@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengajuan NIK Disabilitas</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: rem; /* Sesuaikan dengan tinggi header Anda */
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header>
+        <nav class="bg-white border-gray-200 w-full fixed z-10">
+          <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <div class="flex flex-row items-center">
+              <a href="#hero" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <span class="self-center text-2xl font-semibold whitespace-nowrap uppercase">logo</span>
+              </a>
+            </div>
+            <div>
+              <button
+                data-collapse-toggle="navbar-default"
+                type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                aria-controls="navbar-default"
+                aria-expanded="false"
+              >
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+              </button>
+            </div>
+            <!-- desktop tablet -->
+            <div class="w-full md:block md:w-auto relative hidden" id="navbar-default">
+              <ul
+                class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white absolute md:static w-full md:w-auto md:translate-y-0 md:opacity-100 navbar-web transition-all"
+              >
+                <li>
+                  <a href="#hero" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Beranda </a>
+                </li>
+                <li>
+                  <a href="./pelayanan_data/DalamPembagungan.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Pelayanan Data</a>
+                </li>
+                <li>
+                  <a href="#about-program" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Informasi</a>
+                </li>
+                <li>
+                  <a href="#footer" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Kontak</a>
+                </li>
+                <!-- mobile view -->
+                <div class="mt-2">
+                  <div class="flex md:hidden flex-row pt-4">
+                    <a href="./log-in/login.html" id="loginBtn" class="text-gray-900 bg-white focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2">
+                      <div class="flex flex-row align-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4" viewBox="0 0 24 24" id="person">
+                          <path fill="none" d="M0 0h24v24H0V0z"></path>
+                          <path
+                            d="M12 5.9c1.16 0 2.1.94 2.1 2.1s-.94 2.1-2.1 2.1S9.9 9.16 9.9 8s.94-2.1 2.1-2.1m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v2c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-2c0-2.66-5.33-4-8-4z"
+                          ></path>
+                        </svg>
+                        <span class="ml-1">Masuk</span>
+                      </div>
+                    </a>
+                    <a
+                      href="./sign-in/sign-in.html"
+                      type="button"
+                      class="text-gray-900 bg-white border border-gray-700 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2"
+                      id="registerBtn"
+                      >Daftar</a
+                    >
+                  </div>
+                </div>
+              </ul>
+            </div>
+            <!-- Deskstop -->
+            <div class="hidden md:flex flex-row pt-2">
+              <a id="loginBtnDesktop" href="log-in/login.html" type="button" class="text-gray-900 bg-white focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2">
+                <div class="flex flex-row align-middle">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4" viewBox="0 0 24 24" id="person">
+                    <path fill="none" d="M0 0h24v24H0V0z"></path>
+                    <path
+                      d="M12 5.9c1.16 0 2.1.94 2.1 2.1s-.94 2.1-2.1 2.1S9.9 9.16 9.9 8s.94-2.1 2.1-2.1m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v2c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-2c0-2.66-5.33-4-8-4z"
+                    ></path>
+                  </svg>
+                  <span class="ml-1">Masuk</span>
+                </div>
+              </a>
+              <a
+                id="registerBtnDesktop"
+                href="sign-in/sign-in.html"
+                type="button"
+                class="text-gray-900 bg-white border border-gray-700 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2"
+                >Daftar</a
+              >
+            </div>
+          </div>
+        </nav>
+      </header>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const email = localStorage.getItem("email");
+          if (email) {
+            const loginBtn = document.getElementById("loginBtn");
+            const registerBtn = document.getElementById("registerBtn");
+            const loginBtnDesktop = document.getElementById("loginBtnDesktop");
+            const registerBtnDesktop = document.getElementById("registerBtnDesktop");
+  
+            if (loginBtn && registerBtn) {
+              loginBtn.parentNode.removeChild(loginBtn);
+              registerBtn.parentNode.innerHTML = `
+                           <div class="dashboard-wrapper">
+                              <div class="logout-container">
+                                  <img src="/src/icon/logout.png" alt="Logout" class="logout-icon" id="logoutBtn">
+                              </div>
+                             <a href="/Dashboard/Users/Dasboard-users.html" type="button" class="dashboard-link text-black focus:ring-4 focus: font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-200 dark:text-black dark: dark:hover: dark:hover:dark:focus:">
+                                  Dashboard
+                              </a>
+                          </div>
+                      `;
+            }
+  
+            if (loginBtnDesktop && registerBtnDesktop) {
+              loginBtnDesktop.parentNode.removeChild(loginBtnDesktop);
+              registerBtnDesktop.parentNode.innerHTML = `
+                        <div class="dashboard-wrapper">
+                              <div class="logout-container">
+                                  <img src="./src/icon/logout.png" alt="Logout" class="logout-icon" id="logoutBtnDesktop">
+                              </div>
+                              <a href="/Dashboard/Users/Dasboard-users.html" type="button" class="dashboard-link text-black focus:ring-4 focus: font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-200 dark:text-black dark: dark:hover: dark:hover:dark:focus:">
+                                  Dashboard
+                              </a>
+                          </div>
+                      `;
+            }
+  
+            const logoutBtn = document.getElementById("logoutBtn");
+            const logoutBtnDesktop = document.getElementById("logoutBtnDesktop");
+  
+            if (logoutBtn) {
+              logoutBtn.addEventListener("click", function () {
+                localStorage.clear();
+                window.location.reload();
+              });
+            }
+  
+            if (logoutBtnDesktop) {
+              logoutBtnDesktop.addEventListener("click", function () {
+                localStorage.clear();
+                window.location.reload();
+              });
+            }
+          }
+        });
+      </script>
+
+    <!-- Main Content -->
+    <main class="pt-40 pb-10">
+        <div class="bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto">
+            <h1 class="text-2xl font-semibold mb-4">Formulir Pengajuan NIK Disabilitas</h1>
+            <form id="nik-disabilitas-form">
+                <label class="block mb-2">
+                    <span class="text-gray-700">Nama Lengkap</span>
+                    <input type="text" name="nama" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required>
+                </label>
+                <label class="block mb-2">
+                    <span class="text-gray-700">Tanggal Lahir</span>
+                    <input type="date" name="tanggal_lahir" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required>
+                </label>
+                <label class="block mb-2">
+                    <span class="text-gray-700">Tempat lahir </span>
+                    <input type="text" name="tempat_lahir" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required>
+                </label>
+                <label class="block mb-2">
+                    <span class="text-gray-700">Alamat</span>
+                    <input type="text" name="alamat" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required>
+                </label>
+                <label class="block mb-2">
+                    <span class="text-gray-700">Agama</span>
+                    <select name="jenis_disabilitas" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required>
+                        <option value="">Agama</option>
+                        <option value="islam">Agama islam</option>
+                        <option value="kristen1">Agama Kristen Katotik</option>
+                        <option value="kristen2">Agama Kristen Protestan</option>
+                        <option value="hindu">Agama Hindu</option>
+                        <option value="Budha">Agama Budha</option>
+                        <option value="Konghucu">Agama Konghucu</option>
+                    </select>
+                </label>
+                
+                <label class="block mb-2">
+                    <span class="text-gray-700">Jenis Disabilitas</span>
+                    <select name="jenis_disabilitas" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required>
+                        <option value="">Pilih Jenis Disabilitas</option>
+                        <option value="fisik">Disabilitas Fisik</option>
+                        <option value="sensorik">Disabilitas Sensorik</option>
+                        <option value="mental">Disabilitas Mental</option>
+                        <option value="intelektual">Disabilitas Intelektual</option>
+                        <option value="ganda">Disabilitas Ganda</option>
+                    </select>
+                </label>
+                <label class="block mb-2">
+                    <span class="text-gray-700">Alat Bantu Yang Digunakan</span>
+                    <input type="text" name="alat_bantu" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required>
+                </label>
+                <label class="block mb-2">
+                    <span class="text-gray-700">Nomer Kartu Keluarga</span>
+                    <input type="text" name="Kartu_Keluarga" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required>
+                </label>
+                <label class="block mb-2">
+                    <span class="text-gray-700">Unggah Berkas Kartu Keluarga Anda</span>
+                    <input type="file" name="berkas_KK" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required>
+                </label>
+                <label class="block mb-2">
+                    <span class="text-gray-700">Unggah Foto 3x4 Anda (File JPG/PNG) </span>
+                    <input type="file" name="berkas_KK" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required>
+                </label>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Kirim Pengajuan</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('kia-disabilitas-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Handle form submission to Firebase
+        });
+    </script>
+</body>
+
+</html>

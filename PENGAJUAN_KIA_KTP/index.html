@@ -35,7 +35,6 @@
                     </svg>
                 </button>
             </div>
-            <!-- desktop tablet -->
             <div class="w-full md:block md:w-auto relative hidden" id="navbar-default">
                 <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white absolute md:static w-full md:w-auto md:translate-y-0 md:opacity-100 navbar-web transition-all">
                     <li>
@@ -81,16 +80,19 @@
         </nav>
     </header>
 
-    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h1 class="text-2xl font-semibold text-center mb-6">Pengajuan Pembuatan NIK dan KIA</h1>
-        <p class="mb-4 text-gray-600">Pilih opsi pengajuan:</p>
-        <div class="space-y-4">
-            <a href="pengajuan_nik.html" class="block text-center bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Pengajuan NIK</a>
-            <a href="pengajuan_kia.html" class="block text-center bg-green-500 text-white py-2 rounded hover:bg-green-600">Pengajuan KIA</a>
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 max-w-screen-lg mx-auto p-4">
+        <!-- Card Pengajuan NIK -->
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold text-center mb-6">Pengajuan NIK</h2>
+            <p class="mb-4 text-gray-600">Nomor Induk Kependudukan adalah nomor identitas resmi untuk warga negara Indonesia.</p>
+            <a href="FORM-PENGAJUAN/NIK/form-p-NIK.html" class="block text-center bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Ajukan NIK</a>
         </div>
-        <div class="mt-6 text-sm text-gray-500">
-            <p><strong>NIK:</strong> Nomor Induk Kependudukan adalah nomor identitas resmi untuk warga negara Indonesia.</p>
-            <p><strong>KIA:</strong> Kartu Identitas Anak adalah kartu identitas resmi untuk anak-anak berusia 0 hingga 17 tahun.</p>
+
+        <!-- Card Pengajuan KIA -->
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold text-center mb-6">Pengajuan KIA</h2>
+            <p class="mb-4 text-gray-600">Kartu Identitas Anak adalah kartu identitas resmi untuk anak-anak berusia 0 hingga 17 tahun.</p>
+            <a href="FORM-PENGAJUAN/KIA/form-p-KIA.html" class="block text-center bg-green-500 text-white py-2 rounded hover:bg-green-600">Ajukan KIA</a>
         </div>
     </div>
 </body>

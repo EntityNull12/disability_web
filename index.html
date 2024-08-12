@@ -16,51 +16,12 @@
     <link rel="preload" href="./src/img/2148127324.jpg" as="image" />
     <link rel="preload" href="./src/img/group-colleagues-with-diploma-bg.jpg" as="image" />
     <link rel="preload" href="./src/img/woman-wheelchair-with-tablet.jpg" as="image" />
-
-    <!-- <link rel="stylesheet" href="./src/output.css"> -->
-    <style>
-      .dashboard-btn {
-        display: flex;
-        align-items: center;
-      }
-
-      .logout-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: rgb(51, 1, 1);
-        border-radius: 20px;
-        padding: 7px;
-        margin-right: 10px;
-        margin-top: -7px;
-      }
-
-      .logout-icon {
-        width: 25px;
-        height: 25px;
-        cursor: pointer;
-      }
-
-      .dashboard-link {
-        display: flex;
-        align-items: center;
-        border: 1px solid rgb(0, 13, 31); /* Default outline */
-        color: black; /* Default text color */
-      }
-
-      .dashboard-link:hover,
-      .dashboard-link:focus {
-        background-color: rgb(0, 13, 31); /* Focus background color */
-        color: white; /* Focus text color */
-        outline: none; /* Remove default focus outline */
-      }
-
-      .dashboard-wrapper {
-        display: flex;
-        align-items: center;
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
+  
   </head>
+  
+
+
   <body class="relative">
     <header>
       <nav class="bg-white border-gray-200 w-full fixed z-10">
@@ -84,6 +45,8 @@
               </svg>
             </button>
           </div>
+
+
           <!-- desktop tablet -->
           <div class="w-full md:block md:w-auto relative hidden" id="navbar-default">
             <ul
@@ -101,6 +64,8 @@
               <li>
                 <a href="#footer" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Kontak</a>
               </li>
+
+
               <!-- mobile view -->
               <div class="mt-2">
                 <div class="flex md:hidden flex-row pt-4">
@@ -126,6 +91,9 @@
               </div>
             </ul>
           </div>
+
+
+
           <!-- Deskstop -->
           <div class="hidden md:flex flex-row pt-2">
             <a id="loginBtnDesktop" href="log-in/login.html" type="button" class="text-gray-900 bg-white focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2">
@@ -150,6 +118,8 @@
         </div>
       </nav>
     </header>
+
+    <!-- button function -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const email = localStorage.getItem("email");
@@ -206,6 +176,8 @@
         }
       });
     </script>
+
+    <!-- banner -->
     <main class="">
       <section id="hero">
         <div>
@@ -264,6 +236,8 @@
           </div>
         </div>
       </section>
+
+      <!-- menuju ke program -->
       <section id="get-started" class="my-24">
         <div class="get-started-content md:container mx-5 md:mx-auto md:px-20">
           <div class="flex flex-col lg:flex-row gap-8 mb-6">
@@ -317,7 +291,7 @@
         </div>
       </section>
       
-      
+      <!-- about us -->
       <section id="about" class="my-24">
         <div class="about-content md:container mx-5 md:mx-auto md:px-20">
           <div class="about-content-title relative">
@@ -355,13 +329,14 @@
                   <span>Pengaduan Laporan</span>
                 </li>
               </ul>
-              <!-- <div class="about-content-button mt-8">
-                <a href="/pengaduan/index.html" type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Program apa itu?</a>
-              </div> -->
             </div>
           </div>
         </div>
       </section>
+
+
+
+
       <section id="about-program" class="my-24">
         <div class="about-program-content md:container mx-5 md:mx-auto md:px-20 relative">
           <h2 class="text-black text-3xl capitalize font-bold text-center md:text-left">program unggulan kami</h2>
@@ -429,6 +404,9 @@
           <a href="#" class="capitalize absolute end-0 md:end-20 -bottom-14 mt-2 font-regular text-gray-400">learn more</a>
         </div>
       </section>
+
+
+
       <!-- Data -->
       <section id="data-graph">
         <div class="data-graph-content md:container mx-5 md:mx-auto md:px-20 relative">
@@ -445,6 +423,9 @@
 
             <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app-compat.js"></script>
             <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-database-compat.js"></script>
+
+
+            <!-- firebase config -->
             <script>
               // Firebase configuration
               const firebaseConfig = {
@@ -569,6 +550,8 @@
                 }
               );
             </script>
+
+            <!-- grafik data total disabilitas di provinsi xx -->
             <div class="lg:w-[40%]">
               <div class="relative overflow-x-auto">
                 <table class="w-full text-sm text-left  text-gray-500">
@@ -624,6 +607,8 @@
             </div>
           </div>
 
+
+          <!-- grafik grafik total besar -->
           <div class="flex flex-col  mt-12 md:mt-8 lg:mt-32">
             <div class="flex flex-col md:flex-row basis-1/2 mt-16 lg:mt-0  md:mb-20 ">
               <div class="flex-flex-col text-center basis-1/2 my-10 md:my-0 ">
@@ -646,12 +631,17 @@
               </div>
             </div>
           </div>
+
+
           <div class="mt-24 text-center">
             <a href="./pelayanan_data/DalamPembagungan.html" type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-semibold rounded-lg text-lg px-5 py-5 me-2 mb-2">Lihat lebih lanjut</a>
           </div>
+
           <div id="text1"></div>
         </div>  
       </section>
+
+      <!-- berita -->
       <section id="news" class="mt-24 mb-32">
         <div class="news-content md:container mx-5 md:mx-auto md:px-20 relative">
           <h2 class="text-black text-5xl capitalize font-bold mb-4">berita terkini</h2>
@@ -724,6 +714,9 @@
           <a href="#" class="capitalize absolute end-0 md:end-20 -bottom-20 font-regular text-gray-400">view all</a>
         </div>
       </section>
+
+
+      <!-- footer of course -->
       <footer id="footer" class="bg-black text-white">
         <div class="footer-content relative md:container mx-5 md:mx-auto md:px-20 pt-10">
           <div class="flex flex-row gap-32 flex-wrap md:flex-nowrap">

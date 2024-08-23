@@ -8,255 +8,125 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../src/style.css" />
 </head>
-<style>
-  .dashboard-btn {
-      display: flex;
-      align-items: center;
-  }
-
-  .logout-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: rgb(51, 1, 1);
-      border-radius: 20px;
-      padding: 7px;
-      margin-right: 10px;
-      margin-top: -7px;
-  }
-
-  .logout-icon {
-      width: 25px;
-      height: 25px;
-      cursor: pointer;
-  }
-
-  .dashboard-link {
-      display: flex;
-      align-items: center;
-      border: 1px solid rgb(0, 13, 31);
-      color: black;
-  }
-
-  .dashboard-link:hover,
-  .dashboard-link:focus {
-      background-color: rgb(0, 13, 31);
-      color: white;
-      outline: none;
-  }
-
-  .dashboard-wrapper {
-      display: flex;
-      align-items: center;
-  }
-
-  .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      color: #fff;
-      background-color: #007bff;
-      text-decoration: none;
-      border-radius: 5px;
-  }
-</style>
 <body class="relative">
-  <header class="bg-white border-gray-200 w-full fixed top-0 left-0 z-10">
-    <nav class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <div class="flex flex-row items-center">
-            <a href="#hero" class="flex items-center space-x-3 rtl:space-x-reverse">
+    <header>
+        <nav class="bg-white border-gray-200  w-full fixed z-10">
+          <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <div class="flex flex-row items-center">
+              <a href="../index.html#hero" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <span class="self-center text-2xl font-semibold whitespace-nowrap uppercase">logo</span>
-            </a>
-        </div>
-        <div>
-            <button data-collapse-toggle="navbar-default" type="button"
+              </a>
+            </div>
+            <div>
+              <button
+                data-collapse-toggle="navbar-default"
+                type="button"
                 class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-                aria-controls="navbar-default" aria-expanded="false">
+                aria-controls="navbar-default"
+                aria-expanded="false"
+              >
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M1 1h15M1 7h15M1 13h15" />
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
                 </svg>
-            </button>
-        </div>
-        <!-- desktop tablet -->
-        <div class="w-full md:block md:w-auto relative hidden" id="navbar-default">
-            <ul
-                class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white absolute md:static w-full md:w-auto md:translate-y-0 md:opacity-100 navbar-web transition-all">
+              </button>
+            </div>
+            <!-- desktop tablet -->
+            <div class="w-full md:block md:w-auto relative hidden" id="navbar-default">
+              <ul
+                class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white  absolute md:static w-full md:w-auto md:translate-y-0 md:opacity-100 navbar-web transition-all"
+              >
+                <!-- <li>
+                      <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Beranda</a>
+                  </li> -->
+  
                 <li>
-                    <a href="../index.html"
-                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Beranda</a>
+                  <a
+                    href="../index.html#hero"
+                    class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 "
+                    >Beranda
+                  </a>
                 </li>
                 <li>
-                    <a href="../pelayanan_data/DalamPembagungan.html"
-                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Pelayanan
-                        Data</a>
+                  <a
+                    href="../pelayanan_data/index.html"
+                    class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 "
+                    >Pelayanan Data</a
+                  >
                 </li>
                 <li>
-                    <a href="../index.html#about-program"
-                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Informasi</a>
+                  <a
+                    href="../index.html#about-program"
+                    class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 "
+                    >Informasi</a
+                  >
                 </li>
                 <li>
-                    <a href="../index.html#footer"
-                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Kontak</a>
+                  <a
+                    href="../index.html#footer"
+                    class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 "
+                    >Kontak</a
+                  >
                 </li>
-                <!-- mobile view -->
                 <div class="mt-2">
-                    <div class="flex md:hidden flex-row pt-4">
-                        <a href="../log-in/login.html" id="loginBtn"
-                            class="text-gray-900 bg-white focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2">
-                            <div class="flex flex-row align-middle">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4" viewBox="0 0 24 24" id="person">
-                                    <path fill="none" d="M0 0h24v24H0V0z"></path>
-                                    <path
-                                        d="M12 5.9c1.16 0 2.1.94 2.1 2.1s-.94 2.1-2.1 2.1S9.9 9.16 9.9 8s.94-2.1 2.1-2.1m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v2c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-2c0-2.66-5.33-4-8-4z">
-                                    </path>
-                                </svg>
-                                <span class="ml-1">Masuk</span>
-                            </div>
-                        </a>
-                        <a href="../sign-in/sign-in.html" type="button"
-                            class="text-gray-900 bg-white border border-gray-700 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2"
-                            id="registerBtn">Daftar</a>
-                    </div>
+                  <div class="flex md:hidden flex-row pt-4">
+                    <a
+                      href="../log-in/login.html"
+                      type="button"
+                      class="text-gray-900 bg-white focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 "
+                    >
+                      <div class="flex flex-row align-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4" viewBox="0 0 24 24" id="person">
+                          <path fill="none" d="M0 0h24v24H0V0z"></path>
+                          <path
+                            d="M12 5.9c1.16 0 2.1.94 2.1 2.1s-.94 2.1-2.1 2.1S9.9 9.16 9.9 8s.94-2.1 2.1-2.1m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v2c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-2c0-2.66-5.33-4-8-4z"
+                          ></path>
+                        </svg>
+                        <span class="ml-1">Masuk</span>
+                      </div>
+                    </a>
+                    <a
+                      href="../sign-in/sign-in.html"
+                      type="button"
+                      class="text-gray-900 bg-white border border-gray-700 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 "
+                      >Daftar</a
+                    >
+                  </div>
                 </div>
-            </ul>
-        </div>
-        <!-- Desktop -->
-        <div class="hidden md:flex flex-row pt-2">
-            <a id="loginBtnDesktop" href="../log-in/login.html" type="button"
-                class="text-gray-900 bg-white focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2">
+              </ul>
+            </div>
+            <div class="hidden md:flex flex-row pt-2">
+              <a
+                href="../log-in/login.html"
+                type="button"
+                class="text-gray-900 bg-white focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2"
+              >
                 <div class="flex flex-row align-middle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4" viewBox="0 0 24 24" id="person">
-                        <path fill="none" d="M0 0h24v24H0V0z"></path>
-                        <path
-                            d="M12 5.9c1.16 0 2.1.94 2.1 2.1s-.94 2.1-2.1 2.1S9.9 9.16 9.9 8s.94-2.1 2.1-2.1m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v2c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-2c0-2.66-5.33-4-8-4z">
-                        </path>
-                    </svg>
-                    <span class="ml-1">Masuk</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4" viewBox="0 0 24 24" id="person">
+                    <path fill="none" d="M0 0h24v24H0V0z"></path>
+                    <path
+                      d="M12 5.9c1.16 0 2.1.94 2.1 2.1s-.94 2.1-2.1 2.1S9.9 9.16 9.9 8s.94-2.1 2.1-2.1m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v2c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-2c0-2.66-5.33-4-8-4z"
+                    ></path>
+                  </svg>
+                  <span class="ml-1">Masuk</span>
                 </div>
-            </a>
-            <a id="registerBtnDesktop" href="../sign-in/sign-in.html" type="button"
-                class="text-gray-900 bg-white border border-gray-700 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2">Daftar</a>
-        </div>
-    </nav>
-</header>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const email = localStorage.getItem('email');
-        if (email) {
-            const loginBtn = document.getElementById('loginBtn');
-            const registerBtn = document.getElementById('registerBtn');
-            const loginBtnDesktop = document.getElementById('loginBtnDesktop');
-            const registerBtnDesktop = document.getElementById('registerBtnDesktop');
+              </a>
+              <a
+                href="../sign-in/sign-in.html"
+                type="button"
+                class="text-gray-900 bg-white border border-gray-700 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 "
+                >Daftar</a
+              >
+            </div>
+          </div>
+        </nav>
+      </header>
 
-            if (loginBtn && registerBtn) {
-                loginBtn.parentNode.removeChild(loginBtn);
-                registerBtn.parentNode.innerHTML = `
-                    <div class="dashboard-wrapper">
-                        <div class="logout-container">
-                            <img src="/src/icon/logout.png" alt="Logout" class="logout-icon" id="logoutBtn">
-                        </div>
-                        <a href="../Dashboard/Dasboard.html" type="button" class="dashboard-link text-black font-medium rounded-full text-sm px-5 py-2.5">
-                            Dashboard
-                        </a>
-                    </div>
-                `;
-            }
-
-            if (loginBtnDesktop && registerBtnDesktop) {
-                loginBtnDesktop.parentNode.removeChild(loginBtnDesktop);
-                registerBtnDesktop.parentNode.innerHTML = `
-                    <div class="dashboard-wrapper">
-                        <div class="logout-container">
-                            <img src="/src/icon/logout.png" alt="Logout" class="logout-icon" id="logoutBtnDesktop">
-                        </div>
-                        <a href="../Dashboard/Dasboard.html" type="button" class="dashboard-link text-black font-medium rounded-full text-sm px-5 py-2.5">
-                            Dashboard
-                        </a>
-                    </div>
-                `;
-            }
-
-            const logoutBtn = document.getElementById('logoutBtn');
-            const logoutBtnDesktop = document.getElementById('logoutBtnDesktop');
-
-            if (logoutBtn) {
-                logoutBtn.addEventListener('click', function () {
-                    localStorage.clear();
-                    window.location.reload();
-                });
-            }
-
-            if (logoutBtnDesktop) {
-                logoutBtnDesktop.addEventListener('click', function () {
-                    localStorage.clear();
-                    window.location.reload();
-                });
-            }
-        }
-    });
-</script>
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const email = localStorage.getItem("email");
-          if (email) {
-            const loginBtn = document.getElementById("loginBtn");
-            const registerBtn = document.getElementById("registerBtn");
-            const loginBtnDesktop = document.getElementById("loginBtnDesktop");
-            const registerBtnDesktop = document.getElementById("registerBtnDesktop");
-  
-            if (loginBtn && registerBtn) {
-              loginBtn.parentNode.removeChild(loginBtn);
-              registerBtn.parentNode.innerHTML = `
-                           <div class="dashboard-wrapper">
-                              <div class="logout-container">
-                                  <img src="/src/icon/logout.png" alt="Logout" class="logout-icon" id="logoutBtn">
-                              </div>
-                             <a href="/Dashboard/Users/Dasboard-users.html" type="button" class="dashboard-link text-black focus:ring-4 focus: font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-200 dark:text-black dark: dark:hover: dark:hover:dark:focus:">
-                                  Dashboard
-                              </a>
-                          </div>
-                      `;
-            }
-  
-            if (loginBtnDesktop && registerBtnDesktop) {
-              loginBtnDesktop.parentNode.removeChild(loginBtnDesktop);
-              registerBtnDesktop.parentNode.innerHTML = `
-                        <div class="dashboard-wrapper">
-                              <div class="logout-container">
-                                  <img src="./src/icon/logout.png" alt="Logout" class="logout-icon" id="logoutBtnDesktop">
-                              </div>
-                              <a href="/Dashboard/Users/Dasboard-users.html" type="button" class="dashboard-link text-black focus:ring-4 focus: font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-200 dark:text-black dark: dark:hover: dark:hover:dark:focus:">
-                                  Dashboard
-                              </a>
-                          </div>
-                      `;
-            }
-  
-            const logoutBtn = document.getElementById("logoutBtn");
-            const logoutBtnDesktop = document.getElementById("logoutBtnDesktop");
-  
-            if (logoutBtn) {
-              logoutBtn.addEventListener("click", function () {
-                localStorage.clear();
-                window.location.reload();
-              });
-            }
-  
-            if (logoutBtnDesktop) {
-              logoutBtnDesktop.addEventListener("click", function () {
-                localStorage.clear();
-                window.location.reload();
-              });
-            }
-          }
-        });
-      </script>
       <section class="pt-20 md:pt-32 h-screen container px-4 mx-auto ">
         <div class=" text-center flex flex-col items-center">
-          <h5 class="text-black text-4xl lg:text-5xl lg:w-[1100px] font-bold text-center uppercase">laporkan kasus yang terjadi di sekitar anda</h5>
-          <p class="text-lg md:text-xl mt-4 w-full md:-w-[700px] lg:w-[900px] text-black">Hal - hal yang menurut anda tidak pantas dilakukan atau tidak sesuai dengan hak asasi manusia segera laporkan kepada kami melalui form pelaporan yang tersedia</p>
-          <a href="form-pengaduan.html" type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-md px-5 py-4 me-2 mb-2 mt-8">Buat laporan anda disini!</a>
+          <h5 class="text-black text-3xl font-semibold text-center uppercase">" laporkan kasus yang terjadi di sekitar anda "</h5>
+          <p class="text-md mt-4 w-full md:w-[700px] text-black">Hal - hal yang menurut anda tidak pantas dilakukan atau tidak sesuai dengan hak asasi manusia segera laporkan kepada kami melalui form pelaporan yang tersedia</p>
+          <a href="form-pengaduan.html" type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-4 me-2 mb-2 mt-8">Buat laporan anda disini!</a>
 
           <img src="../src/img/pengaduan-bg.png" class="h-auto max-w-full" alt="" srcset="">
         </div>
@@ -289,6 +159,8 @@
               // Get a reference to the Realtime Database service
               const db = firebase.database();
               const usersRef = db.ref("users");
+
+              
   document.addEventListener("DOMContentLoaded", function () {
     const email = localStorage.getItem("email");
     if (email) {

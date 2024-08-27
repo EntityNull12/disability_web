@@ -274,69 +274,68 @@
 
     <!-- Main Content -->
     <main class="pt-40 pb-10">
-      <div class="bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto">
-        <h1 class="text-2xl font-semibold mb-4">
+      <div class="bg-white p-6 rounded-lg shadow-lg max-w-screen-xl mx-auto">
+        <h1 class="text-3xl font-semibold mb-6">
           Formulir Pengajuan NIK Disabilitas
         </h1>
         <form id="nik-disabilitas-form">
-          <label class="block mb-2">
-            <span class="text-gray-700">Nama Lengkap</span>
+          <label class="block mb-3">
+            <span class="text-xl text-gray-700">Nama Lengkap</span>
             <input
               type="text"
               name="nama"
-              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-lg"
               required
             />
           </label>
-          <label class="block mb-2">
-            <span class="text-gray-700">Tanggal Lahir</span>
+          <label class="block mb-3">
+            <span class="text-xl text-gray-700">Tanggal Lahir</span>
             <input
               type="date"
               name="tanggal_lahir"
-              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-lg"
               required
             />
           </label>
-          <label class="block mb-2">
-            <span class="text-gray-700">Tempat lahir </span>
+          <label class="block mb-3">
+            <span class="text-xl text-gray-700">Tempat Lahir</span>
             <input
               type="text"
               name="tempat_lahir"
-              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-lg"
               required
             />
           </label>
-          <label class="block mb-2">
-            <span class="text-gray-700">Alamat</span>
+          <label class="block mb-3">
+            <span class="text-xl text-gray-700">Alamat</span>
             <input
               type="text"
               name="alamat"
-              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-lg"
               required
             />
           </label>
-          <label class="block mb-2">
-            <span class="text-gray-700">Agama</span>
+          <label class="block mb-3">
+            <span class="text-xl text-gray-700">Agama</span>
             <select
-              name="jenis_disabilitas"
-              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              name="agama"
+              class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-lg"
               required
             >
               <option value="">Agama</option>
-              <option value="islam">Agama islam</option>
-              <option value="kristen1">Agama Kristen Katotik</option>
+              <option value="islam">Agama Islam</option>
+              <option value="kristen1">Agama Kristen Katolik</option>
               <option value="kristen2">Agama Kristen Protestan</option>
               <option value="hindu">Agama Hindu</option>
-              <option value="Budha">Agama Budha</option>
-              <option value="Konghucu">Agama Konghucu</option>
+              <option value="budha">Agama Budha</option>
+              <option value="konghucu">Agama Konghucu</option>
             </select>
           </label>
-
-          <label class="block mb-2">
-            <span class="text-gray-700">Jenis Disabilitas</span>
+          <label class="block mb-3">
+            <span class="text-xl text-gray-700">Jenis Disabilitas</span>
             <select
               name="jenis_disabilitas"
-              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-lg"
               required
             >
               <option value="">Pilih Jenis Disabilitas</option>
@@ -347,46 +346,45 @@
               <option value="ganda">Disabilitas Ganda</option>
             </select>
           </label>
-          <label class="block mb-2">
-            <span class="text-gray-700">Alat Bantu Yang Digunakan</span>
+          <label class="block mb-3">
+            <span class="text-xl text-gray-700">Alat Bantu Yang Digunakan</span>
             <input
               type="text"
               name="alat_bantu"
-              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-lg"
               required
             />
           </label>
-          <label class="block mb-2">
-            <span class="text-gray-700">Nomer Kartu Keluarga</span>
+          <label class="block mb-3">
+            <span class="text-xl text-gray-700">Nomor Kartu Keluarga</span>
             <input
               type="text"
-              name="Kartu_Keluarga"
-              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              name="kartu_keluarga"
+              class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-lg"
               required
             />
           </label>
-          <label class="block mb-2">
-            <span class="text-gray-700">Unggah Berkas Kartu Keluarga Anda</span>
+          <label class="block mb-3">
+            <span class="text-xl text-gray-700">Unggah Berkas Kartu Keluarga Anda</span>
             <input
               type="file"
-              name="berkas_KK"
-              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              name="berkas_kk"
+              class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-lg"
               required
             />
           </label>
-          <label class="block mb-2">
-            <span class="text-gray-700">Unggah Foto 3x4 Anda (File JPG/PNG)</span>
+          <label class="block mb-3">
+            <span class="text-xl text-gray-700">Unggah Foto 3x4 Anda (File JPG/PNG)</span>
             <input
               type="file"
-              name="foto_3x4" 
-              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              name="foto_3x4"
+              class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-lg"
               required
             />
           </label>
-          
           <button
             type="submit"
-            class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+            class="bg-blue-500 text-white px-5 py-3 rounded-md hover:bg-blue-600 text-xl font-semibold"
           >
             Kirim Pengajuan
           </button>
@@ -394,6 +392,7 @@
         </form>
       </div>
     </main>
+    
     <!-- Firebase Configuration -->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>

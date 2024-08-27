@@ -56,6 +56,8 @@
             text-decoration: none;
             border-radius: 5px;
         }
+
+        
     </style>
 </head>
 
@@ -144,21 +146,30 @@
         <div class="flex flex-1 justify-center items-center">
             <div class="grid grid-cols-1 gap-8 md:grid-cols-2 max-w-screen-lg mx-auto mt-16 md:mt-24">
                 <!-- Card Pengajuan NIK -->
-                <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-300">
-                    <h2 class="text-2xl font-semibold text-center mb-4">Pengajuan NIK</h2>
-                    <p class="mb-6 text-gray-600 text-center">Nomor Induk Kependudukan adalah nomor identitas resmi untuk warga negara Indonesia.</p>
-                    <a href="FORM-PENGAJUAN/NIK/form-p-NIK.html" class="block text-center bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Ajukan NIK</a>
+                <div class="bg-white p-10 md:p-16 rounded-lg shadow-lg border border-gray-300 transform transition-all duration-300 hover:scale-105">
+                    <h2 class="text-5xl font-semibold text-center mb-6">Pengajuan NIK</h2>
+                    <p class="text-2xl mb-8 text-gray-600 text-center leading-relaxed">
+                        Nomor Induk Kependudukan adalah nomor identitas resmi untuk warga negara Indonesia.
+                    </p>
+                    <a href="FORM-PENGAJUAN/NIK/form-p-NIK.html" class="block text-center bg-blue-500 text-white py-3 px-6 rounded-lg hover:bg-blue-600 text-lg">
+                        Ajukan NIK
+                    </a>
                 </div>
-
+    
                 <!-- Card Pengajuan KIA -->
-                <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-300">
-                    <h2 class="text-2xl font-semibold text-center mb-4">Pengajuan KIA</h2>
-                    <p class="mb-6 text-gray-600 text-center">Kartu Identitas Anak adalah kartu identitas resmi untuk anak-anak di Indonesia.</p>
-                    <a href="FORM-PENGAJUAN/KIA/form-p-KIA.html" class="block text-center bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Ajukan KIA</a>
+                <div class="bg-white p-10 md:p-16 rounded-lg shadow-lg border border-gray-300 transform transition-all duration-300 hover:scale-105">
+                    <h2 class="text-5xl font-semibold text-center mb-6">Pengajuan KIA</h2>
+                    <p class="text-2xl mb-8 text-gray-600 text-center leading-relaxed">
+                        Kartu Identitas Anak adalah kartu identitas resmi untuk anak-anak di Indonesia.
+                    </p>
+                    <a href="FORM-PENGAJUAN/KIA/form-p-KIA.html" class="block text-center bg-green-500 text-white py-3 px-6 rounded-lg hover:bg-green-600 text-lg">
+                        Ajukan KIA
+                    </a>
                 </div>
             </div>
         </div>
     </main>
+    
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const email = localStorage.getItem('email');

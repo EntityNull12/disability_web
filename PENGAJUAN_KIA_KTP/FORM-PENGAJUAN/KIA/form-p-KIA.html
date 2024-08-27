@@ -271,43 +271,43 @@
     </script>
     <!-- Main Content -->
     <main class="pt-40 pb-10">
-      <div class="bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto">
-        <h1 class="text-2xl font-semibold mb-4">
+      <div class="bg-white p-6 rounded-lg shadow-lg mx-auto" style="max-width: 1000px;">
+        <h1 class="text-3xl font-semibold mb-4">
           Formulir Pengajuan KIA Disabilitas
         </h1>
         <form id="kia-disabilitas-form">
           <label class="block mb-2">
-            <span class="text-gray-700">Nama Lengkap</span>
+            <span class="text-lg text-gray-700">Nama Lengkap</span>
             <input
               type="text"
               name="nama"
-              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               required
             />
           </label>
           <label class="block mb-2">
-            <span class="text-gray-700">Tanggal Lahir</span>
+            <span class="text-lg text-gray-700">Tanggal Lahir</span>
             <input
               type="date"
               name="tanggal_lahir"
-              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               required
             />
           </label>
           <label class="block mb-2">
-            <span class="text-gray-700">Alamat</span>
+            <span class="text-lg text-gray-700">Alamat</span>
             <input
               type="text"
               name="alamat"
-              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               required
             />
           </label>
           <label class="block mb-2">
-            <span class="text-gray-700">Jenis Disabilitas</span>
+            <span class="text-lg text-gray-700">Jenis Disabilitas</span>
             <select
               name="jenis_disabilitas"
-              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               required
             >
               <option value="">Pilih Jenis Disabilitas</option>
@@ -319,19 +319,17 @@
             </select>
           </label>
           <label class="block mb-2">
-            <span class="text-gray-700"
-              >Unggah Surat Keterangan Disabilitas</span
-            >
+            <span class="text-lg text-gray-700">Unggah Surat Keterangan Disabilitas</span>
             <input
               type="file"
               name="berkas_disabilitas"
-              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               required
             />
           </label>
           <button
             type="submit"
-            class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+            class="bg-blue-500 text-white px-5 py-3 rounded-md hover:bg-blue-600 text-lg"
           >
             Kirim Pengajuan
           </button>
@@ -339,6 +337,7 @@
         <div id="messageContainer" class="mt-4"></div>
       </div>
     </main>
+    
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
